@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Logic\Logic.Interfaces\Logic.Interfaces.csproj" />
+    <ProjectReference Include="..\Logic.Models\Logic.Models.csproj" />
   </ItemGroup>
 
 </Project>

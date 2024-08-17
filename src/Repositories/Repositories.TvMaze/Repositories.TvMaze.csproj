@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="devdeer.Libraries.RestClient" Version="3.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Logic\Logic.Interfaces\Logic.Interfaces.csproj" />
   </ItemGroup>
 
