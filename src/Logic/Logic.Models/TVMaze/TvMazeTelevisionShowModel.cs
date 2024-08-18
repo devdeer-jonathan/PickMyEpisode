@@ -9,12 +9,21 @@
     {
         #region properties
 
+        /// <summary>
+        /// The unique identifier of the show.
+        /// </summary>
         [JsonPropertyName("id")]
         public int Id { get; set; }
 
+        /// <summary>
+        /// The name of the show.
+        /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = default!;
 
+        /// <summary>
+        /// The date on which the show premiered.
+        /// </summary>
         [JsonPropertyName("premiered")]
         public string? PremierDate { get; set; }
 
