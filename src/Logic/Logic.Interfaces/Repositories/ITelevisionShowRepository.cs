@@ -3,7 +3,7 @@
     using Models;
 
     /// <summary>
-    /// Must be implmented by all the repositories handling television show related data access.
+    /// Must be implemented by all the repositories handling television show related data access.
     /// </summary>
     public interface ITelevisionShowRepository
     {

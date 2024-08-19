@@ -16,7 +16,7 @@
         public float Score { get; set; }
 
         /// <summary>
-        /// The tv show matching the search query.
+        /// The TV show matching the search query.
         /// </summary>
         [JsonPropertyName("show")]
         public TvMazeTelevisionShowModel Show { get; set; } = default!;
