@@ -4,7 +4,6 @@ using Logic.Interfaces.Logic;
 using Logic.Interfaces.Repositories;
 
 using Microsoft.Extensions.DependencyInjection;
-using devdeer.Libraries.Abstractions.Extensions;
 
 using Logic.Core;
 
@@ -17,10 +16,12 @@ using Ui.Console;
 var builder = Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
     {
-        // TODO add your service dependencies here
         services.AddTransient<ITelevisionShowRepository, TelevisionShowRepository>();
         services.AddTransient<ITelevisionShowLogic, TelevisionShowLogic>();
-        services.AddHttpClient<IJsonRestClient, TvMazeRestClient>();
+        services.AddHttpClient<IJsonRestClient, TvMazeRestClient>(httpClient =>
+        {
+            httpClient.BaseAddress = new Uri("https://api.tvmaze.com");
+        });
         services.AddSingleton<App>();
     });
 var app = builder.Build();

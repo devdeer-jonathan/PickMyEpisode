@@ -27,7 +27,7 @@
         public async Task<IEnumerable<EpisodeModel>> GetEpisodesByShowIdAsync(int showId)
         {
             var episodeResults =
-                await Client.GetAsync<IEnumerable<TvMazeEpisode>>($"https://api.tvmaze.com/shows/{showId}/episodes");
+                await Client.GetAsync<IEnumerable<TvMazeEpisode>>($"shows/{showId}/episodes");
             if (episodeResults == null)
             {
                 throw new ArgumentException($"Could not retrieve episodes for show with ID {showId}");
@@ -48,7 +48,7 @@
         {
             var showResults =
                 await Client.GetAsync<List<TvMazeShowResultModel>>(
-                    $"https://api.tvmaze.com/search/shows?q={searchQuery}");
+                    $"search/shows?q={searchQuery}");
             if (showResults == null)
             {
                 throw new ApplicationException("Could not retrieve results from the TV Maze API.");
